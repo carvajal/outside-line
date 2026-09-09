@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets & sensitive data (NEVER commit)
+.env
+*.session*
+# Everything under data/ is operator state (PII, secrets, embeddings, transcripts).
+# Deny-all by default and keep the directory itself via .gitkeep so the path
+# stays present in fresh clones.
+data/*
+!data/.gitkeep
+
+# Tooling
+.claude/settings.local.json
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+.ngrok.log
+.uvicorn.log
+.uvicorn.supervisor.state

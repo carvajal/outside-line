@@ -1,0 +1,33 @@
+[project]
+name = "outside-line"
+version = "0.1.0"
+description = "Voice agent that answers phone calls and can bridge a caller to a contact over Telegram"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.136.3",
+    "httpx>=0.28.1",
+    "numpy>=2.4.6",
+    "openai>=2.38.0",
+    "py-tgcalls>=2.3.3",
+    "pydantic-settings>=2.14.1",
+    "python-dotenv>=1.2.2",
+    "soxr>=1.1.0",
+    "structlog>=25.5.0",
+    "telethon>=1.43.2",
+    "uvicorn[standard]>=0.48.0",
+    "websockets>=16.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.17,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "pytest-asyncio>=1.4.0",
+    "ruff>=0.15.15",
+]

@@ -1,0 +1,27 @@
+# Keep the image to what the app needs: source, lockfiles, assets.
+# COPY . . in the Dockerfile honors this list.
+
+# Secrets & operator state — never bake into an image.
+.env
+*.session*
+data/
+
+# VCS, caches, local tooling
+.git/
+.github/
+.claude/
+.venv/
+__pycache__/
+*.py[oc]
+.pytest_cache/
+.ruff_cache/
+.dockerignore
+Dockerfile
+
+# Dev-only artifacts
+tests/
+docs/
+scripts/
+*.log
+.uvicorn.supervisor.state
+.DS_Store
